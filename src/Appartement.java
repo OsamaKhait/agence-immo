@@ -3,16 +3,16 @@ import java.util.ArrayList;
 
 public class Appartement extends BienImmobilier {
     private boolean ascenseur;
-    private int etage;
+    private String etage;
     protected List<Piece> pieces = new ArrayList<>();
 
-    public Appartement(String rue, String ville, String codePostal, Vendeur vendeur, int etage) {
+    public Appartement(String rue, String ville, String codePostal, Vendeur vendeur, String etage) {
         super(rue, ville, codePostal, vendeur);
         this.ascenseur = false;
         this.etage = etage;
     }
 
-    public Appartement(String rue, String ville, String codePostal, Vendeur vendeur, int etage, boolean ascenseur) {
+    public Appartement(String rue, String ville, String codePostal, Vendeur vendeur, String etage, boolean ascenseur) {
         super(rue, ville, codePostal, vendeur);
         this.ascenseur = ascenseur;
         this.etage = etage;

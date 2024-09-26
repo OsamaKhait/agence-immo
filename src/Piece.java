@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public abstract class Piece {
     private TypePiece typePiece;
     private String niveau;
@@ -19,6 +21,8 @@ public abstract class Piece {
 
     @Override
     public String toString() {
-        return typePiece + " surface : " + surface() + " m2\n";
-    } 
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        return typePiece + " surface : " + numberFormat.format(surface()) + " m2\n";
+    }
+     
 }
