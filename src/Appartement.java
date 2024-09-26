@@ -25,7 +25,7 @@ public class Appartement extends BienImmobilier {
 
     public String typeBien() {
         long count = getPieces().stream()
-                .filter(piece -> piece.getTypePiece().isSurfaceHabitable())
+                .filter(piece -> piece.getTypePiece().isPiece())
                 .count();
         return "T" + (count > 7 ? "7+" : count);
     }
